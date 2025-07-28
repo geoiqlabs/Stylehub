@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Your Fashion Destination</title>
+    <meta name="description" content="Discover the latest fashion trends with StyleHub. Curated collection of clothing, accessories, and lifestyle products with exclusive deals and offers.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="45" fill="url(#gradient1)" stroke="#ff6b9d" stroke-width="2"/>
+                            <path d="M25 40 L50 25 L75 40 L75 65 L50 80 L25 65 Z" fill="white" opacity="0.9"/>
+                            <circle cx="50" cy="50" r="12" fill="#ff6b9d"/>
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff6b9d"/>
+                                    <stop offset="100%" style="stop-color:#c44569"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <h1 class="brand-name">StyleHub</h1>
+                    </div>
+                    <p class="brand-tagline">Your Fashion Destination</p>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <input type="checkbox" id="mobile-menu" class="mobile-menu-toggle">
+                <label for="mobile-menu" class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#categories" class="nav-link">Categories</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#deals" class="nav-link">Deals</a>
+                    <a href="#about" class="nav-link">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Discover Your <span class="highlight">Perfect Style</span></h1>
+                <p class="hero-description">Curated fashion collection featuring the latest trends, exclusive deals, and must-have pieces for every wardrobe.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#categories" class="btn btn-secondary">Browse Categories</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Brands</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Fashion model showcasing trendy outfit" />
+                <div class="floating-card card-1">
+                    <span class="discount">30% OFF</span>
+                    <span class="product-name">Summer Collection</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span class="discount">FREE SHIPPING</span>
+                    <span class="product-name">Orders Above ₹999</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Shop by Categories</h2>
+                <p class="section-description">Explore our carefully curated fashion categories designed to match your unique style and personality.</p>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-card" data-category="women">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Women's Fashion" class="category-image" />
+                    <div class="category-overlay">
+                        <h3 class="category-title">Women's Fashion</h3>
+                        <p class="category-count">250+ Products</p>
+                        <a href="#products" class="category-btn" onclick="filterProducts('women')">Shop Women</a>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="men">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Men's Fashion" class="category-image" />
+                    <div class="category-overlay">
+                        <h3 class="category-title">Men's Fashion</h3>
+                        <p class="category-count">180+ Products</p>
+                        <a href="#products" class="category-btn" onclick="filterProducts('men')">Shop Men</a>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="accessories">
+                    <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Accessories" class="category-image" />
+                    <div class="category-overlay">
+                        <h3 class="category-title">Accessories</h3>
+                        <p class="category-count">120+ Products</p>
+                        <a href="#products" class="category-btn" onclick="filterProducts('accessories')">Shop Accessories</a>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="footwear">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Footwear" class="category-image" />
+                    <div class="category-overlay">
+                        <h3 class="category-title">Footwear</h3>
+                        <p class="category-count">90+ Products</p>
+                        <a href="#products" class="category-btn" onclick="filterProducts('footwear')">Shop Shoes</a>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="bags">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Bags & Handbags" class="category-image" />
+                    <div class="category-overlay">
+                        <h3 class="category-title">Bags & Handbags</h3>
+                        <p class="category-count">60+ Products</p>
+                        <a href="#products" class="category-btn" onclick="filterProducts('bags')">Shop Bags</a>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="jewelry">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Jewelry" class="category-image" />
+                    <div class="category-overlay">
+                        <h3 class="category-title">Jewelry</h3>
+                        <p class="category-count">80+ Products</p>
+                        <a href="#products" class="category-btn" onclick="filterProducts('jewelry')">Shop Jewelry</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-title">
+                    <h3>Featured Products</h3>
+                    <span id="product-count" class="product-count">Showing all products</span>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+                    <button class="filter-btn" onclick="filterProducts('women')">Women</button>
+                    <button class="filter-btn" onclick="filterProducts('men')">Men</button>
+                    <button class="filter-btn" onclick="filterProducts('accessories')">Accessories</button>
+                    <button class="filter-btn" onclick="filterProducts('footwear')">Footwear</button>
+                    <button class="filter-btn" onclick="filterProducts('bags')">Bags</button>
+                    <button class="filter-btn" onclick="filterProducts('jewelry')">Jewelry</button>
+                </div>
+                <div class="sort-dropdown">
+                    <select id="sort-select" onchange="sortProducts()">
+                        <option value="featured">Sort by Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Deals Section -->
+    <section id="deals" class="deals">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title white">Special Deals & Offers</h2>
+                <p class="section-description light">Limited time offers and exclusive deals you don't want to miss!</p>
+            </div>
+
+            <div class="deals-grid">
+                <div class="deal-card featured">
+                    <div class="deal-badge">FLASH SALE</div>
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" alt="Flash Sale" class="deal-image" />
+                    <div class="deal-content">
+                        <h3 class="deal-title">Flash Sale - Up to 70% OFF</h3>
+                        <p class="deal-description">Limited time offer on selected items. Hurry up!</p>
+                        <div class="deal-timer">
+                            <span class="timer-unit">
+                                <span class="timer-number" id="hours">23</span>
+                                <span class="timer-label">Hours</span>
+                            </span>
+                            <span class="timer-unit">
+                                <span class="timer-number" id="minutes">45</span>
+                                <span class="timer-label">Minutes</span>
+                            </span>
+                            <span class="timer-unit">
+                                <span class="timer-number" id="seconds">30</span>
+                                <span class="timer-label">Seconds</span>
+                            </span>
+                        </div>
+                        <a href="https://www.myntra.com/flash-sale" target="_blank" class="deal-btn">Shop Flash Sale</a>
+                    </div>
+                </div>
+
+                <div class="deal-card">
+                    <div class="deal-badge">NEW ARRIVAL</div>
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" alt="New Arrival" class="deal-image" />
+                    <div class="deal-content">
+                        <h3 class="deal-title">New Collection Launch</h3>
+                        <p class="deal-description">Fresh styles just arrived. Be the first to shop!</p>
+                        <a href="https://www.myntra.com/new-arrivals" target="_blank" class="deal-btn secondary">Explore New</a>
+                    </div>
+                </div>
+
+                <div class="deal-card">
+                    <div class="deal-badge">FREE SHIPPING</div>
+                    <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" alt="Free Shipping" class="deal-image" />
+                    <div class="deal-content">
+                        <h3 class="deal-title">Free Shipping Worldwide</h3>
+                        <p class="deal-description">No minimum order value. Shop worry-free!</p>
+                        <a href="https://www.myntra.com/free-shipping" target="_blank" class="deal-btn secondary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Why Choose StyleHub?</h2>
+                    <p class="about-intro">Your trusted partner in fashion, bringing you the latest trends and timeless classics at unbeatable prices.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature">
+                            <div class="feature-icon">✨</div>
+                            <h4 class="feature-title">Curated Collection</h4>
+                            <p class="feature-description">Hand-picked items from top brands and emerging designers</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">💰</div>
+                            <h4 class="feature-title">Best Prices</h4>
+                            <p class="feature-description">Exclusive affiliate deals and discounts you won't find elsewhere</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">🚚</div>
+                            <h4 class="feature-title">Fast Delivery</h4>
+                            <p class="feature-description">Quick and reliable shipping with real-time tracking</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">🔒</div>
+                            <h4 class="feature-title">Secure Shopping</h4>
+                            <p class="feature-description">Safe and secure payment processing with buyer protection</p>
+                        </div>
+                    </div>
+
+                    <div class="social-proof">
+                        <h4>Follow us on social media for daily fashion inspiration:</h4>
+                        <div class="social-links">
+                            <a href="https://instagram.com/stylehub" target="_blank" class="social-link instagram">
+                                <span class="social-icon">📷</span>
+                                <span class="social-text">@stylehub</span>
+                            </a>
+                            <a href="https://youtube.com/@stylehub" target="_blank" class="social-link youtube">
+                                <span class="social-icon">📺</span>
+                                <span class="social-text">StyleHub TV</span>
+                            </a>
+                            <a href="https://myntra.com/stylehub" target="_blank" class="social-link myntra">
+                                <span class="social-icon">🛍️</span>
+                                <span class="social-text">Myntra Store</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500" alt="Fashion designer workspace" />
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Products</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">4.8⭐</span>
+                            <span class="stat-label">Customer Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="logo-icon small" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="45" fill="url(#gradient2)" stroke="#ff6b9d" stroke-width="2"/>
+                            <path d="M25 40 L50 25 L75 40 L75 65 L50 80 L25 65 Z" fill="white" opacity="0.9"/>
+                            <circle cx="50" cy="50" r="12" fill="#ff6b9d"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff6b9d"/>
+                                    <stop offset="100%" style="stop-color:#c44569"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <h3 class="footer-title">StyleHub</h3>
+                    </div>
+                    <p class="footer-description">Your ultimate fashion destination for trendy, affordable, and quality clothing and accessories.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#categories">Categories</a>
+                        <a href="#products">Products</a>
+                        <a href="#deals">Deals</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Categories</h4>
+                        <a href="#" onclick="filterProducts('women')">Women's Fashion</a>
+                        <a href="#" onclick="filterProducts('men')">Men's Fashion</a>
+                        <a href="#" onclick="filterProducts('accessories')">Accessories</a>
+                        <a href="#" onclick="filterProducts('footwear')">Footwear</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Follow Us</h4>
+                        <a href="https://instagram.com/stylehub" target="_blank">Instagram</a>
+                        <a href="https://youtube.com/@stylehub" target="_blank">YouTube</a>
+                        <a href="https://myntra.com/stylehub" target="_blank">Myntra Store</a>
+                        <a href="https://facebook.com/stylehub" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. All rights reserved. | Affiliate links may earn commission.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <span>↑</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
